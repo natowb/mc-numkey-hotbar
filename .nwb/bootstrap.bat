@@ -44,6 +44,13 @@ move %CLIENT_DIR% %NWB_DIR%\tmp
 move %SERVER_DIR% %NWB_DIR%\tmp
 
 %MCP_BIN% setup b1.7.3
+%MCP_BIN% decompile
+
+xcopy /e /h /y "%NWB_DIR%\tmp\minecraft\" "%CLIENT_DIR%\"
+xcopy /e /h /y "%NWB_DIR%\tmp\minecraft_server\" "%SERVER_DIR%\"
+
+rmdir /s /q "%NWB_DIR%\tmp\minecraft"
+rmdir /s /q "%NWB_DIR%\tmp\minecraft_server"
 
 :: Delete Eclipse shit
 rmdir /s /q "%CLIENT_DIR%\.settings"
@@ -56,16 +63,6 @@ del "%SERVER_DIR%\.classpath"
 del "%SERVER_DIR%\.project"
 del "%SERVER_DIR%\Server.launch"
 
-%MCP_BIN% decompile
-
-xcopy /e /h /y "%NWB_DIR%\tmp\minecraft\" "%CLIENT_DIR%\"
-xcopy /e /h /y "%NWB_DIR%\tmp\minecraft_server\" "%SERVER_DIR%\"
-
-rmdir /s /q "%NWB_DIR%\tmp\minecraft"
-rmdir /s /q "%NWB_DIR%\tmp\minecraft_server"
-
-
-%NWB_DIR%\scripts\patch.bat
 
 :: Setup Intelij Configuration
 
