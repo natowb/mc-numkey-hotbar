@@ -5,6 +5,7 @@ conf/
 jars/
 libraries/
 patches/
+build/
 
 
 # RetroMCP Client
