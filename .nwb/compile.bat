@@ -16,6 +16,6 @@ set NATIVE_LIB_PATH=%BASE_DIR%\libraries\natives
 
 set MCP_BIN=java -jar %BIN_DIR%\mcp.jar
 
-%NWB_DIR%\update_ignores.bat
+call %NWB_DIR%\update_ignores.bat
 %MCP_BIN% recompile
 %MCP_BIN% build
