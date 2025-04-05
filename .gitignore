@@ -1,0 +1,35 @@
+.idea/
+
+# RetroMCP-Java stuff 
+conf/
+jars/
+libraries/
+patches/
+
+
+# RetroMCP Client
+minecraft/bin/
+minecraft/game/
+minecraft/md5/
+minecraft/source/
+minecraft/src/net/minecraft/src/*.java
+minecraft/src/net/minecraft/client/*.java
+minecraft/src/net/minecraft/isom/*.java
+
+# RetroMCP Server
+minecraft_server/bin/
+minecraft_server/game/
+minecraft_server/md5/
+minecraft_server/source/
+minecraft_server/src/net/minecraft/src/*.java
+minecraft_server/src/net/minecraft/server/*.java
+minecraft_server/src/net/minecraft/isom/*.java
+
+# NWB Modules
+minecraft/Client.iml
+minecraft_server/Server.iml
+## DO NOT EDIT ABOVE
+
+
+# include src files that you have edited here
+# !minecraft/src/net/minecraft/client/Minecraft.java
