@@ -12,6 +12,7 @@ minecraft/bin/
 minecraft/game/
 minecraft/md5/
 minecraft/source/
+minecraft/reobf/
 minecraft/src/net/minecraft/src/*.java
 minecraft/src/net/minecraft/client/*.java
 minecraft/src/net/minecraft/isom/*.java
@@ -21,6 +22,7 @@ minecraft_server/bin/
 minecraft_server/game/
 minecraft_server/md5/
 minecraft_server/source/
+minecraft_server/reobf/
 minecraft_server/src/net/minecraft/src/*.java
 minecraft_server/src/net/minecraft/server/*.java
 minecraft_server/src/net/minecraft/isom/*.java
