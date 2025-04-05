@@ -26,12 +26,32 @@ if not exist "%BIN_DIR%" (
     curl.exe -L -o %BIN_DIR%\mcp.jar "https://github.com/MCPHackers/RetroMCP-Java/releases/download/v1.0/RetroMCP-Java-CLI.jar" > nul
 )
 
+
 :: Setup Workspace
 echo ==================================================
 echo Setting up RetroMCP-Java workspace for b1.7.3
 echo ==================================================
+
+
+if not exist "%CLIENT_DIR%" (
+    mkdir "%CLIENT_DIR%"
+)
+
+if not exist "%SERVER_DIR%" (
+    mkdir "%SERVER_DIR%"
+)
+
+move %CLIENT_DIR% %NWB_DIR%\tmp
+move %SERVER_DIR% %NWB_DIR%\tmp
+
 %MCP_BIN% setup b1.7.3
 %MCP_BIN% decompile
+
+xcopy /e /h /y "%NWB_DIR%\tmp\minecraft\" "%CLIENT_DIR%\"
+xcopy /e /h /y "%NWB_DIR%\tmp\minecraft_server\" "%SERVER_DIR%\"
+
+rmdir /s /q "%NWB_DIR%\tmp\minecraft"
+rmdir /s /q "%NWB_DIR%\tmp\minecraft_server"
 
 rmdir /s /q "%CLIENT_DIR%\.settings"
 del "%CLIENT_DIR%\.classpath"
