@@ -6,6 +6,7 @@ jars/
 libraries/
 patches/
 build/
+output/
 
 
 # RetroMCP Client
