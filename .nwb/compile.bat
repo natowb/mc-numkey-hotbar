@@ -1,3 +1,5 @@
+@echo off
+
 set BASE_DIR=%cd%
 
 set NWB_DIR=%BASE_DIR%\.nwb
@@ -13,3 +15,6 @@ set SERVER_GAME_DIR=%SERVER_DIR%\game
 set NATIVE_LIB_PATH=%BASE_DIR%\libraries\natives
 
 set MCP_BIN=java -jar %BIN_DIR%\mcp.jar
+
+%MCP_BIN% recompile
+%MCP_BIN% build
